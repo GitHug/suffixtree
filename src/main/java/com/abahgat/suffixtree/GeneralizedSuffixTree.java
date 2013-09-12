@@ -20,6 +20,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.abahgat.suffixtree.DotWriter.DotNode;
 import com.abahgat.suffixtree.Edge;
 import com.abahgat.suffixtree.EdgeBag;
 import com.abahgat.suffixtree.Node;
@@ -229,7 +230,8 @@ public class GeneralizedSuffixTree {
      * @return at most <tt>results</tt> values for the given word
      * @see GeneralizedSuffixTree#ResultInfo
      */
-    public ResultInfo searchWithCount(String word, int to) {
+    @SuppressWarnings("unchecked")
+	public ResultInfo searchWithCount(String word, int to) {
         Node tmpNode = searchNode(word);
         if (tmpNode == null) {
             return new ResultInfo(Collections.EMPTY_LIST, 0);
