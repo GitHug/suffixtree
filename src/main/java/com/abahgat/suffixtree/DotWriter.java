@@ -161,7 +161,7 @@ public class DotWriter {
 		@Override
 		public boolean equals(Object obj) {
 			if(obj == null) {
-				
+				return false;
 			}
 			else if(getClass() != obj.getClass()) {
 				return false;
