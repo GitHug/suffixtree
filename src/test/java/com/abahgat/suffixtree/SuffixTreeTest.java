@@ -337,6 +337,8 @@ public class SuffixTreeTest extends TestCase {
 		
 		File f = new File("out.gv");
 		assertTrue(f.exists());
+		f.delete();
+		assertFalse(f.exists());
 	}
 
 }
